@@ -1,0 +1,274 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#faeaea;
+}
+
+body h1{
+    font-weight: 200;
+    margin-left: 110px;
+}
+
+
+h2{
+    font-weight: 200;
+    text-align: center;
+}
+
+div.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+div.pizza{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background-color: #e3c67a;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.tomaat-saus{
+    border-radius: 50%;
+    border: 6px solid red;
+    background-color: #e3c67a;
+    height: 400px;
+    width: 400px;
+    display: none;
+}
+
+div.kaas-saus{
+    border-radius: 50%;
+    border: 6px solid #ffd798;
+    background-color: #e3c67a;
+    height: 400px;
+    width: 400px;
+    display: none;
+}
+
+div.tomaat-saus.reveal{
+    display: flex;
+}
+
+div.kaas-saus.reveal{
+    display: flex;
+}
+
+div.saucebutton-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.saucebutton-container div.button-sauce{
+    background-color: #F0BCBC;
+    height: 150px;
+    width: 200px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.ingredients-container{
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    display: none;
+}
+
+div.ingredients-container.appear{
+    display: grid;
+}
+
+div.ingredients-container div.ingredient{
+    background-color: #F0BCBC;
+    height: 100px;
+    width: 150px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.ingredients-container div.ingredient img{
+    width: 25px;
+}
+
+div.button-sauce img{
+    width: 70px;
+}
+
+div.saucebutton-container div.button-sauce.disappear{
+    display: none;
+}
+
+div.tomaat-container{
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    display: none;
+    position: absolute;
+}
+
+div.mozarella-container{
+    position: absolute;
+    display: none;
+}
+
+div.bacon-container{
+    position: absolute;
+    display: none;
+}
+
+div.ananas-container{
+    position: absolute;
+    display: none;
+}
+
+div.mushroom-container{
+    position: absolute;
+    display: none;
+}
+
+div.mushroom-container.appear{
+    display: block;
+}
+
+div#mush1{
+    position: relative;
+    left: -78px;
+    top: -37px;
+}
+
+div#an1{
+    position: absolute;
+    left: 130px;
+}
+
+div#an2{
+    position: relative;
+    top: 97px;
+}
+
+div.ananas-container.appear{
+    display: block;
+}
+
+div.bacon-container.appear{
+    display: block;
+}
+
+div#bac1{
+    left: 110px;
+    position: absolute;
+}
+
+div#bac2{
+    right: 110px;
+    position: absolute;
+}
+
+div#bac3{
+    bottom: 110px;
+}
+
+div#pos1{
+    top: 65px;
+    position: absolute;
+}
+div#pos2{
+    right: 65px;
+    position: absolute;
+}
+div#pos3{
+    left: 65px;
+    position: absolute;
+}
+
+div#pos4{
+    top: -150px;
+    position: absolute;
+}
+
+div#tom1{
+    position: relative;
+    top: -40px;
+}
+div#tom2{
+    position: relative;
+    right: -70px;
+}
+div#tom3{ 
+    position: relative;
+    right: 78px;
+
+}
+div#tom4{
+    position: relative;
+    left: 50px;
+}
+div#tom5{
+    position: relative;
+    bottom: -60px;
+}
+
+div#tom6{
+    bottom: -60px;
+    position: relative;
+    left: 47px;
+
+}
+
+div.mozarella-container.appear{
+    display: block;
+}
+
+
+div.tomaat-container.appear{
+    display: grid;
+}
+
+div.tomaat-container div.tomaat img{
+    width: 70px;
+}
+
+div.next-button{
+    background-color: rgb(222, 109, 109);
+    font-weight: 200;
+    width: 70px;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    padding: 25px;
+    border-radius: 36px;
+}
+
+div.next-button.disappear{
+    display: none;
+}
+
+div.saucebutton-container.disappear{
+    display: none;
+}
+
+div.prev-button{
+    background-color: rgb(222, 109, 109);
+    font-weight: 200;
+    width: 70px;
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    padding: 25px;
+    border-radius: 36px;
+    display: none;
+}
+
+div.prev-button.appear{
+    display: block;
+}
