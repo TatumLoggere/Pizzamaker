@@ -20,7 +20,7 @@ var baconContainer = document.querySelector(".bacon-container");
 var ananasContainer = document.querySelector(".ananas-container");
 var mushroomContainer = document.querySelector(".mushroom-container");
 
-var audio = new Audio("sound/audio.mp3")
+var audio = new Audio("Sound/audio.mp3")
 
 console.log(audio);
 
