@@ -20,6 +20,10 @@ var baconContainer = document.querySelector(".bacon-container");
 var ananasContainer = document.querySelector(".ananas-container");
 var mushroomContainer = document.querySelector(".mushroom-container");
 
+var audio = new Audio("sound/audio.mp3")
+
+console.log(audio);
+
 headerTitle.textContent = "Selecteer een pizza";
 
 
@@ -74,6 +78,8 @@ function nextItems(){
 
 //voeg tomaatsaus toe aan de pizza
 function addSauce(){
+    audio.load()
+    audio.play()
     //hier check ik of kaassaus bestaat zodat de gebruiker niet meerdere sauzen kan selecteren
     if(kaasSaus.classList.contains("reveal")){
         kaasSaus.classList.remove("reveal");
