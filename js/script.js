@@ -1,7 +1,7 @@
 // Hier selecteer ik alle elementen uit de html
 
 //getelementbyID zorgt ervoor dat ik elementen kan pakken bij de id
-//de variabele geef aan doormiddel van camelcase
+//de variabele geef aan doormiddel van camelcase (aA)
 var tomaat = document.getElementById('tomaat');
 var kaas = document.getElementById('kaas');
 var tomaatSaus = document.querySelector('.tomaat-saus');
@@ -20,16 +20,20 @@ var baconContainer = document.querySelector(".bacon-container");
 var ananasContainer = document.querySelector(".ananas-container");
 var mushroomContainer = document.querySelector(".mushroom-container");
 
-var audio = new Audio("Sound/audio.mp3")
-
+var audio = new Audio("sound/audio.mp3")
 console.log(audio);
 
 headerTitle.textContent = "Selecteer een pizza";
 
 
 //bronnen --
+//https://www.pngegg.com/en/png-fnizq 
+//https://www.pngegg.com/en/png-ysrat
+//https://www.pngegg.com/en/png-zmbjx
+//https://www.pngegg.com/en/png-bmfrw
+//https://www.pngegg.com/en/png-owkih
+
 function addIngrdient(id){
-    //check of de id een bepaalde ingredient is en voer de code uit die er bij hoort
 
     console.log(id)
     if(id == "tomaat"){
@@ -43,7 +47,7 @@ function addIngrdient(id){
     }else if(id == "mushrooms"){
        mushroomContainer.classList.toggle("appear");
     }else if(id == "tonijn"){
-        console.log("heel goed tonijn");
+        console.log("heerlijke tonijn");
     }
 }
 
@@ -76,7 +80,7 @@ function nextItems(){
     headerTitle.textContent = "Selecteer je ingredienten (Max. 5)";
 }
 
-//voeg tomaatsaus toe aan de pizza
+//voeg tomaatsaus toe aan de pizza (Audio)
 function addSauce(){
     audio.load()
     audio.play()
@@ -92,39 +96,26 @@ function addCheeseSauce(){
 
     if(tomaatSaus.classList.contains("reveal")){
         tomaatSaus.classList.remove("reveal");
-        // kaasSaus.classList.toggle("reveal");
     }else{
         kaasSaus.classList.toggle("reveal")
     }
-    
-    // if(tomaatSaus.classList.contains("reveal")){
-    //     tomaatSaus.classList.remove("reveal");
-    //     kaasSaus.classList.toggle("reveal");
-    // }else{
-    //     console.log("succes!")
-    // }
 }
 
 
-// function tomaatSaus(){
-//     console.log("hallo");
-// }
-
-//clickevent die bepaalde functionaliteiten af laat gaan voor de sauzen in deze scenario
+//clickevent die bepaalde functionaliteiten af laat gaan voor de sauzen
 tomaat.addEventListener("click", addSauce);
 kaas.addEventListener("click", addCheeseSauce);
 
 nextBtn.addEventListener("click", nextItems);
 prevBtn.addEventListener("click", removeIngredients);
 
-//selecteer alle buttons doormiddel van queryselectorAll || callback function
+//ik heb alle buttons geselecteerd doormiddel van queryselectorAll 
 ingredients.forEach(function(ingredient){
     ingredient.addEventListener("click", function(e){
 
-        //pak de dataset die hoort bij een element en stop die in een variabele
         var id = e.target.dataset.ingredient;
-        //call/invoke de onderstaande functie
         addIngrdient(id);
     });
 })
 
+//bron audio: https://mixkit.co/free-sound-effects/discover/pizza/
