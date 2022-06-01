@@ -118,4 +118,4 @@ ingredients.forEach(function(ingredient){
     });
 })
 
-//bron audio: https://mixkit.co/free-sound-effects/discover/pizza/
+//Bron audio: https://mixkit.co/free-sound-effects/discover/pizza/
